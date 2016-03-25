@@ -1,0 +1,52 @@
+﻿
+.Standard {
+    width: 100px;
+}
+
+.Wide {
+    width: 250px;
+}
+
+
+.BoxEdge {
+    margin: 5px;
+}
+
+
+.Pad {
+    padding: 10px;
+}
+
+.Required {
+    background-color: #FFFF00;
+}
+ 
+.NR {
+    background-color: #FFFFFF;
+}
+
+.Red {
+    border: thin dotted #FF6600;
+    background-color: red;
+}
+
+.Green {
+    background-color: green;
+}
+
+.White {
+    color: white;
+    font-size: large;
+}
+
+/*Ensure table cell elements at top aligned*/
+table td { 
+  display: table-cell;
+  vertical-align: top; 
+}
+
+.InvalidEmail {
+    font-size: large;
+    font-weight: bold;
+    color: #FFFF00;
+}

@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<form>
+    <input type="file" id="UserFile" />
+    <a href="#" id="lnkUpload">Upload CSV</a>
+</form>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th class="Pad">Username</th>
+        <th class="Pad">Password</th>
+        <th class="Pad">First name</th>
+        <th class="Pad">Last name</th>
+        <th class="Pad">Email address</th>
+        <th class="Pad"> -- action -- </th>
+    </tr>
+    </thead>
+    <tbody data-bind="foreach: userModel">
+    <tr data-bind="css: ValidCredentials">
+        <td class="Pad"><input data-bind="value: UserName, css: USR_Required" class="Standard"/></td>
+        <td class="Pad"><input data-bind="value: Password, css: PWD_Required" class="Standard" /></td>
+        <td class="Pad"><input data-bind="value: FirstName" class="Standard"/></td>
+        <td class="Pad"><input data-bind="value: LastName"  class="Standard"/></td>
+        <td class="Pad"><input data-bind="value: Email, css: EML_Required"  class="Wide"/> <br /> <span data-bind="visible: InValidEmail" class="InvalidEmail">Email address invalid!</span></td>
+        <td class="Pad"><a href="#" data-bind="click: $parent.removeUser"><span class="White">Remove user</span></a></td>
+    </tr>
+    </tbody>
+</table>
+
+@section scripts {
+
+    <script src="~/Scripts/ViewScript.js"></script>
+
+
+
+}
